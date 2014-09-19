@@ -8,7 +8,7 @@ angular.module('ngflbigmoonApp')
 
     clearInterval(retryTimer);
 
-    var ioSocket = io.connect('', {
+    var ioSocket = io.connect('http://ngflbigmoon-bigmoonapp.rhcloud.com:8000', {
       'force new connection': true,
 
       'max reconnection attempts': Infinity,

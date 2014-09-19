@@ -1,34 +1,147 @@
-<div class="landing-img">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-offset-1 col-md-10 col-lg-offset-1 col-lg-10">
-				<div class="moon-img">
-					<p class="text-center"><img src="../assets/images/BigMoon.png" alt="moon image" width="500" /></p>
-				</div>
-				<p class="home-desc">We are a boutique creative studio specializing in web development, graphic design, and branding. We struggle with perfectionism and strive to serve our clients well.</p>
-			</div>
-		</div>
-	</div>
-</div>
-<nav class="navbar navbar-default" role="navigation">
+<nav class="navbar navbar-default" ng-controller="HomeCtrl">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <button type="button" class="navbar-toggle collapsed" ng-click="isCollapsed = !isCollapsed">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
+      <a class="navbar-brand" href="#">Brand</a>
     </div>
+
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <div class="navbar-collapse" ng-class="isCollapsed ? 'collapse' : 'in'">
       <ul class="nav navbar-nav">
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
+        <li class="active"><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+<div class="container">
+  <p class="text-center"><img class="img-responsive" src="../assets/images/BigMoon.png" alt="Big Moon Creative" /></p>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <p class="subhead">Services</h3>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <p class="subhead">Portfolio</h3>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <p class="subhead">About</h3>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-offset-2 col-md-3">
+      <p class="text-center"><img src="../assets/images/aaron.png" alt="Aaron Johnson-Lead Developer" class="img-responsive round-img"/></p>
+      <p class="name">Aaron Johnson</p>
+      <p class="title">Lead Developer</p>
+      <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel hendrerit nibh, mollis laoreet tortor.</p>
+    </div>
+    <div class="col-md-offset-2 col-md-3">
+      <p class="text-center"><img src="../assets/images/tim.png" alt="Tim LaCapra-Lead Designer" class="img-responsive round-img" /></p>
+      <p class="name">Tim LaCapra</p>
+      <p class="title">Lead Designer</p>
+      <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel hendrerit nibh, mollis laoreet tortor.</p>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <p class="subhead">Contact</h3>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <p class="contact-name">Aaron Johnson</p>
+      <p class="contact-email">aaron@bigmooncreative.com</p>
+      <p class="contact-phone">615.630.1457</p>
+    </div>
+    <div class="col-md-3">
+      <p class="contact-name">Tim Lacapra</p>
+      <p class="contact-email">tim@bigmooncreative.com</p>
+      <p class="contact-phone">615.630.1457</p>
+    </div>
+    <div class="col-md-6">
+      <p class="intouch">Get in Touch</p>
+      <p class="intouch-text">Tell us about your project. We typically respond in two business days to set up a meeting where we can get to know each other and start defining goals, scope, budget, and timeline.</p>
+      <form>
+        <div class="form-group">
+          <label>Full Name *</label>
+          <input type="text" class="form-control" />
+        </div>
+        <div class="form-group">
+          <label>Email Address*</label>
+          <input type="email" class="form-control" />
+        </div>
+        <div class="form-group">
+          <label>Tell us about your project</label>
+          <textarea type="text_area" class="form-control" rows="4"></textarea>
+        </div>
+        <button class="btn btn-danger">Get In Touch</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <p class="footer-text">&copy; 2014 Big Moon Creative. All Rights Reserved.</p>
+</div>
+
+
+
+
+
