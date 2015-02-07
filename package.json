@@ -22,7 +22,9 @@
     "composable-middleware": "^0.3.0",
     "connect-mongo": "^0.4.1",
     "socket.io": "~0.9.16",
-    "socketio-jwt": "^2.0.2"
+    "socketio-jwt": "^2.0.2",
+    "nodemailer": "1.0.0",
+    "nodemailer-sendgrid-transport": "0.0.2"
   },
   "devDependencies": {
     "grunt": "~0.4.4",
